@@ -1,6 +1,10 @@
 import languages from "../data/languages"
+import { useState } from "react"
 
 const Main = () => {
+
+    const { lang, setLang } = useState
+
     return (
 
         <div className="container">
