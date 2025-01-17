@@ -21,7 +21,7 @@ const Main = () => {
                 <h2 className="p-3"> {isActive ? languages[lang].title : "Linguaggio non selezionato"}</h2>
                 <p className="p-3">{isActive ? languages[lang].description : "Seleziona un linguaggio"}</p>
             </div>
-            <button onClick={() => { setLang(); setIsActive(false); setActiveButton(999) }} className={`mx-5 p-2 rounded-3`} >Annulla</button>
+            <button onClick={() => { setLang(); setIsActive(false); setActiveButton() }} className={`mx-5 p-2 rounded-3`} >Annulla</button>
         </div>
     )
 }
