@@ -13,8 +13,7 @@ const Main = () => {
             <div className="sezioneBtn text-center">
                 {languages.map((linguaggi, index) => {
                     return (
-                        <button onClick={() => { setLang(index); setIsActive(true); setActiveButton(index) }} className={`mx-5 p-2 rounded-3 ${activeButton === index ? "bg-info text-white" : ""}`} key={linguaggi.id} >{linguaggi.title}</button>
-
+                        <button onClick={() => { setLang(index); setIsActive(true); setActiveButton(index) }} className={`mx-5 p-2 rounded-3 bg-info ${activeButton === index ? "bg-warning text-white" : ""}`} key={linguaggi.id} >{linguaggi.title}</button>
                     )
                 })}
             </div>
@@ -22,6 +21,7 @@ const Main = () => {
                 <h2 className="p-3"> {isActive ? languages[lang].title : "Linguaggio non selezionato"}</h2>
                 <p className="p-3">{isActive ? languages[lang].description : "Seleziona un linguaggio"}</p>
             </div>
+            <button onClick={() => { setLang(); setIsActive(false); setActiveButton(999) }} className={`mx-5 p-2 rounded-3`} >Annulla</button>
         </div>
     )
 }
